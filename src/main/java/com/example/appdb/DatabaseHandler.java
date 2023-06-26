@@ -246,5 +246,112 @@ public class DatabaseHandler extends Configs {
         PreparedStatement preparedStatement = connection.prepareStatement(SQL_UPDATE_TASKS_VISITS);
         preparedStatement.executeUpdate();
     }
+
+    public ResultSet selectIDs() throws SQLException {
+        Connection connection = getConnection();
+        Statement statement = connection.createStatement();
+        String SQL_SELECT_TASKS_IDS = "SELECT \"patientId\" FROM public.\"Patients\"";
+        ResultSet result = statement.executeQuery(SQL_SELECT_TASKS_IDS);
+
+        return result;
+    }
+
+    public ResultSet selectNames() throws SQLException {
+        Connection connection = getConnection();
+        Statement statement = connection.createStatement();
+        String SQL_SELECT_TASKS_NAMES = "SELECT \"fullName\" FROM public.\"Patients\"";
+        ResultSet result = statement.executeQuery(SQL_SELECT_TASKS_NAMES);
+
+        return result;
+    }
+
+    public ResultSet selectMales() throws SQLException {
+        Connection connection = getConnection();
+        Statement statement = connection.createStatement();
+        String SQL_SELECT_TASKS_MALES = "SELECT \"male\" FROM public.\"Patients\"";
+        ResultSet result = statement.executeQuery(SQL_SELECT_TASKS_MALES);
+        return result;
+    }
+
+    public ResultSet selectDatesOfBirths() throws SQLException {
+        Connection connection = getConnection();
+        Statement statement = connection.createStatement();
+        String SQL_SELECT_TASKS_BDATES = "SELECT \"dateOfBirth\" FROM public.\"Patients\"";
+        ResultSet result = statement.executeQuery(SQL_SELECT_TASKS_BDATES);
+
+        return result;
+    }
+
+    public ResultSet selectAges() throws SQLException {
+        Connection connection = getConnection();
+        Statement statement = connection.createStatement();
+        String SQL_SELECT_TASKS_AGES = "SELECT \"age\" FROM public.\"Patients\"";
+        ResultSet result = statement.executeQuery(SQL_SELECT_TASKS_AGES);
+
+        return result;
+    }
+
+    public ResultSet selectSocialStatuses() throws SQLException {
+        Connection connection = getConnection();
+        Statement statement = connection.createStatement();
+        String SQL_SELECT_TASKS_SSTATUSES = "SELECT \"socialStatus\" FROM public.\"Patients\"";
+        ResultSet result = statement.executeQuery(SQL_SELECT_TASKS_SSTATUSES);
+
+        return result;
+    }
+
+    public ResultSet selectLocalities() throws SQLException {
+        Connection connection = getConnection();
+        Statement statement = connection.createStatement();
+        String SQL_SELECT_TASKS_LOCALITIES = "SELECT \"locality\" FROM public.\"Location\"";
+        ResultSet result = statement.executeQuery(SQL_SELECT_TASKS_LOCALITIES);
+
+        return result;
+    }
+
+    public ResultSet selectHomeAdresses() throws SQLException {
+        Connection connection = getConnection();
+        Statement statement = connection.createStatement();
+        String SQL_SELECT_TASKS_HADRESSES = "SELECT \"homeAdress\" FROM public.\"Location\"";
+        ResultSet result = statement.executeQuery(SQL_SELECT_TASKS_HADRESSES);
+
+        return result;
+    }
+
+    public ResultSet selectDiagnosis() throws SQLException {
+        Connection connection = getConnection();
+        Statement statement = connection.createStatement();
+        String SQL_SELECT_TASKS_DIAGNOSIS = "SELECT \"diagnosis\" FROM public.\"MedInfo\"";
+        ResultSet result = statement.executeQuery(SQL_SELECT_TASKS_DIAGNOSIS);
+
+        return result;
+    }
+
+    public ResultSet selectTreatments() throws SQLException {
+        Connection connection = getConnection();
+        Statement statement = connection.createStatement();
+        String SQL_SELECT_TASKS_TREATMENTS = "SELECT \"treatment\" FROM public.\"MedInfo\"";
+        ResultSet result = statement.executeQuery(SQL_SELECT_TASKS_TREATMENTS);
+
+        return result;
+    }
+
+    public ResultSet selectLastVisitsDates() throws SQLException {
+        Connection connection = getConnection();
+        Statement statement = connection.createStatement();
+        String SQL_SELECT_TASKS_LASTVISITS = "SELECT \"lastVisitDate\" FROM public.\"Visits\"";
+        ResultSet result = statement.executeQuery(SQL_SELECT_TASKS_LASTVISITS);
+
+        return result;
+    }
+
+    public ResultSet selectFirstVisitsDates() throws SQLException {
+        Connection connection = getConnection();
+        Statement statement = connection.createStatement();
+        String SQL_SELECT_TASKS_FIRSTVISITS = "SELECT \"firstVisitDate\" FROM public.\"Visits\"";
+        ResultSet result = statement.executeQuery(SQL_SELECT_TASKS_FIRSTVISITS);
+
+        return result;
+    }
 }
 

@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1164.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appdb.loginController">
    <children>
-      <TableView layoutY="1.0" prefHeight="611.0" prefWidth="1164.0">
+      <TableView fx:id="myTable" layoutY="1.0" prefHeight="611.0" prefWidth="1164.0">
         <columns>
           <TableColumn fx:id="fullName" prefWidth="75.0" text="ФИО" />
           <TableColumn fx:id="male" prefWidth="75.0" text="ПОЛ" />
@@ -27,5 +27,6 @@
          </columnResizePolicy>
       </TableView>
       <Button fx:id="buttonBack" layoutX="14.0" layoutY="649.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="86.0" text="Назад" />
+      <Button fx:id="buttonShow" layoutX="441.0" layoutY="636.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="282.0" text="Показать информацию" />
    </children>
 </AnchorPane>
