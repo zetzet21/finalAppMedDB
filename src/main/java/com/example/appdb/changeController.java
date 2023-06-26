@@ -100,6 +100,18 @@ public class changeController {
                 dbHandler.updateLoc(locality.getText(), homeAdress.getText(), id);
                 dbHandler.updateMedInfo(diagnos.getText(), treatment.getText(), id);
                 dbHandler.updateVisits(dateOfFirstVisit.getText(), dateOfLastVisit.getText(), id);
+                fullName.setText("");
+                male.setText("");
+                dateOfBirth.setText("");
+                age.setText("");
+                socialStatus.setText("");
+                locality.setText("");
+                homeAdress.setText("");
+                diagnos.setText("");
+                treatment.setText("");
+                dateOfFirstVisit.setText("");
+                dateOfLastVisit.setText("");
+                searchId.setText("");
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
@@ -110,6 +122,18 @@ public class changeController {
             DatabaseHandler dbHandler = new DatabaseHandler();
             try {
                 dbHandler.deletePat(id);
+                fullName.setText("");
+                male.setText("");
+                dateOfBirth.setText("");
+                age.setText("");
+                socialStatus.setText("");
+                locality.setText("");
+                homeAdress.setText("");
+                diagnos.setText("");
+                treatment.setText("");
+                dateOfFirstVisit.setText("");
+                dateOfLastVisit.setText("");
+                searchId.setText("");
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
@@ -123,6 +147,17 @@ public class changeController {
                 dbHandler.insertLoc(locality.getText(), homeAdress.getText());
                 dbHandler.insertMedInfo(diagnos.getText(), treatment.getText());
                 dbHandler.insertVisits(dateOfFirstVisit.getText(), dateOfLastVisit.getText());
+                fullName.setText("");
+                male.setText("");
+                dateOfBirth.setText("");
+                age.setText("");
+                socialStatus.setText("");
+                locality.setText("");
+                homeAdress.setText("");
+                diagnos.setText("");
+                treatment.setText("");
+                dateOfFirstVisit.setText("");
+                dateOfLastVisit.setText("");
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
